@@ -1,0 +1,58 @@
+@for (project of projects; track project; let i = $index) {
+  <section class="w-100 d-flex justify-content-center align-items-center position-relative" id="section-general"
+    >
+    @if (i % 2 === 0) {
+      <div class="content d-grid align-items-center justify-content-center w-100">
+        <div class="description position-relative">
+          <div class="separator-container" aria-hidden="true">
+            <div class="separator">
+              <div class="line">
+                <div class="notch"></div>
+              </div>
+            </div>
+            <span class="section-number">{{ project.number | number: '2.0' }}</span>
+          </div>
+          <h2 class="text-white">{{ project.title }}</h2>
+          <p class="text-secondary">{{ project.description }}</p>
+          <div>
+            <a href="" class="button">
+              <span class="text-button">Ver Projeto</span>
+              <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: var(--space-s);" width="24px" height="24px" viewBox="0 0 24 24" fill="">
+                <path _ngcontent-ng-c1643237946="" d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="div-project-img">
+          <img src="{{ project.image }}" alt="{{ project.title }}" class="project-img">
+        </div>
+      </div>
+    } @else {
+      <div class="content d-grid align-items-center justify-content-center w-100">
+        <div class="div-project-img">
+          <img src="{{ project.image }}" alt="{{ project.title }}" class="project-img">
+        </div>
+        <div class="description position-relative">
+          <div class="separator-container" aria-hidden="true">
+            <div class="separator">
+              <div class="line">
+                <div class="notch"></div>
+              </div>
+            </div>
+            <span class="section-number">{{ project.number | number: '2.0' }}</span>
+          </div>
+          <h2 class="text-white">{{ project.title }}</h2>
+          <p class="text-secondary">{{ project.description }}</p>
+          <div>
+            <a href="" class="button">
+              <span class="text-button">Ver Projeto</span>
+              <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: var(--space-s);" width="24px" height="24px" viewBox="0 0 24 24" fill="">
+                <path _ngcontent-ng-c1643237946="" d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    }
+  </section>
+}

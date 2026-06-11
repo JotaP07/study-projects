@@ -1,0 +1,40 @@
+      _        
+     | |   ___
+     | |  |  _ \
+ _   | |  | |_) |
+| |__| |  |  __/
+ \____/   |_|
+
+
+Este arquivo `humans.txt` explica a equipe, as tecnologias
+e os recursos visuais utilizados neste site.
+
+_______________________________________________________________________________
+
+DESENVOLVEDOR | DEVELOPER
+
+João Pedro Canhete
+Desenvolvimento de software e design de interface
+
+Ferramentas de desenvolvimento:
+- Figma
+- Visual Studio Code
+- Adobe Illustrator
+
+Projetos:
+github.com/JotaP07
+https://www.linkedin.com/in/jpcanhete/
+
+_______________________________________________________________________________
+
+TECNOLOGIAS | TECHNOLOGIES
+
+Bootstrap
+Angular
+TypeScript
+
+_______________________________________________________________________________
+
+FONTS | FONTES
+
+Gotham

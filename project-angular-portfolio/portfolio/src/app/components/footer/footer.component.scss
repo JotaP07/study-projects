@@ -1,0 +1,43 @@
+footer {
+    padding: var(--space-3xl) var(--space-l);
+    z-index: 8;
+
+}
+
+span {
+    font-family: var(--system-font-stack);
+}
+
+a {
+    color: var(--text-body);
+    text-decoration: underline;
+    text-decoration-color: #6c757d58;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: color 0.3s, text-decoration-color 0.3s; /* Combina as transições em uma linha */
+}
+
+a:hover {
+    color: white;
+    text-decoration-color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-description {
+        font-size: 0.9rem !important; /* Reduz o tamanho da fonte em telas menores */
+    }
+    
+    .footer-description {
+        display: flex !important; /* Ativa o Flexbox */
+        flex-direction: column !important; /* Garante que a coluna é mantida em telas menores */
+        align-items: center !important; /* Centraliza os itens */
+        margin: 0 auto !important; /* Centraliza o bloco */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-description {
+        font-size: 0.8rem !important; /* Reduz ainda mais o tamanho da fonte em telas pequenas */
+    }
+}

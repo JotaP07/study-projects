@@ -1,0 +1,209 @@
+<main>
+  <app-header></app-header>
+  <section class="d-flex flex-column justify-content-center align-items-center" id="sectionHeader"
+    style="height: 100vh; padding-right: var(--space5XL); padding-left: var(--space4XL);">
+    <header class="container" style="max-width: 780px; top: calc(var(--spaceL) * -1); position:relative;">
+      <div>
+        <h2 class="text-secondary" id="MyName" style="font-size: 1.375rem; margin: 0; letter-spacing: 0.1rem;" [textContent]="name"></h2>
+        <h1 class="text-white title-with-line" id="HeaderTitle" style="margin-bottom: 0.5rem;">Back-End</h1>
+        <h2 class="text-white d-flex justify-content-end title-with-line-developer" id="HeaderTitle">
+          <span>Developer</span>
+          <span class="line "></span>
+        </h2>
+      </div>
+      <div class="d-flex justify-content-end">
+        <p class="text-secondary" id="LanguagesHeader" style="font-size: 1.3rem; letter-spacing: 0.1rem;">Java | Spring
+          Boot | MySQL</p>
+      </div>
+    </header>
+    <div class="scroll-indicator mt-5" [class.hidden]="isScrolled" id="scrollIndicator">
+      <div class="mouse">
+        <div class="scroll"></div>
+      </div>
+    </div>
+  </section>
+
+
+<app-projects></app-projects>
+<app-about-me></app-about-me>
+<app-footer></app-footer>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--
+  <section class="w-100 d-flex justify-content-center align-items-center" id="summary" style="position: relative;max-height: 1080px;
+    padding-bottom: var(--spaceL); height:100vh;
+      padding-right: var(--spaceM) !important;;
+    padding-left: calc(var(--space2XL)* 2); box-sizing: border-box;">
+
+
+    <div class="projectDiv w-100 d-grid align-items-center justify-content-center"
+      style="max-width: 1000px; grid-template-columns: 40% 1fr; grid-column-gap: var(--space2XL);">
+
+      <div class="container-fluid" style="position: relative;">
+
+        <div class="description-project">
+          <div class="separator-container" aria-hidden="true">
+            <div class="separator">
+              <div class="line"></div>
+              <div class="notch"></div>
+            </div>
+            <span class="section-number" style="color: #8800ff;">01</span>
+          </div>
+          <h1 class="text-white" style="font-size: 2.25rem;">Project Example <br>010101</h1>
+          <p class="text-secondary" style="font-size: 1.125rem;">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Saepe enim esse </p>
+          <div>
+            <a href="" class="button">
+              <span class="text-button">
+                Ver Projeto
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="" id="divProjectImg">
+        <img src="https://junkielabs.in/assets/img/showcase/products/apps/list/sensify.png" alt="Project Example"
+          class="imgProject" style="position: absolute; top: 0;right: 0;bottom: 0; left: 0; width: 100%;">
+      </div>
+    </div>
+  </section>
+
+  <section class="w-100 d-flex justify-content-center align-items-center" id="summary" style="position: relative;max-height: 1080px;
+    padding-bottom: var(--spaceL); height:100vh;
+      padding-right: var(--spaceM) !important;;
+    padding-left: calc(var(--space2XL)* 2); box-sizing: border-box;">
+    <div class="projectDiv w-100 d-grid align-items-center justify-content-center"
+      style="max-width: 1000px; grid-template-columns: 40% 1fr; grid-column-gap: var(--space2XL);">
+
+      <div class="container-fluid" style="position: relative;">
+
+        <div class="description-project">
+          <div class="separator-container" aria-hidden="true">
+            <div class="separator">
+              <div class="line"></div>
+              <div class="notch"></div>
+            </div>
+            <span class="section-number" style="color: #8800ff;">01</span>
+          </div>
+          <h1 class="text-white" style="font-size: 2.25rem;">Project Example <br>010101</h1>
+          <p class="text-secondary" style="font-size: 1.125rem;">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Saepe enim esse </p>
+          <div>
+            <a href="" class="button">
+              <span class="text-button">
+                Ver Projeto
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="" id="divProjectImg">
+        <img src="https://junkielabs.in/assets/img/showcase/products/apps/list/sensify.png" alt="Project Example"
+          class="imgProject" style="position: absolute; top: 0;right: 0;bottom: 0; left: 0; width: 100%;">
+      </div>
+    </div>
+  </section>
+
+  <section class="w-100 d-flex justify-content-center align-items-center" id="summary" style="position: relative;max-height: 1080px;
+    padding-bottom: var(--spaceL); height:100vh;
+      padding-right: var(--spaceM) !important;;
+    padding-left: calc(var(--space2XL)* 2); box-sizing: border-box;">
+    <div class="projectDiv w-100 d-grid align-items-center justify-content-center"
+      style="max-width: 1000px; grid-template-columns: 40% 1fr; grid-column-gap: var(--space2XL);">
+
+      <div class="container-fluid" style="position: relative;">
+
+        <div class="description-project">
+          <div class="separator-container" aria-hidden="true">
+            <div class="separator">
+              <div class="line"></div>
+              <div class="notch"></div>
+            </div>
+            <span class="section-number" style="color: #8800ff;">03</span>
+          </div>
+          <h1 class="text-white" style="font-size: 2.25rem;">Project Example <br>030303</h1>
+          <p class="text-secondary" style="font-size: 1.125rem;">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Saepe enim esse </p>
+          <div>
+            <a href="" class="button">
+              <span class="text-button">
+                Ver Projeto
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="" id="divProjectImg">
+        <img src="https://junkielabs.in/assets/img/showcase/products/apps/list/sensify.png" alt="Project Example"
+          class="imgProject" style="position: absolute; top: 0;right: 0;bottom: 0; left: 0; width: 100%;">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="w-100 d-flex justify-content-center align-items-center" id="summary" style="position: relative;max-height: 1080px;
+    padding-bottom: var(--spaceL); height:100vh;
+      padding-right: var(--spaceM) !important;;
+    padding-left: calc(var(--space2XL)* 2); box-sizing: border-box;">
+    <div class="aboutMeDiv d-grid"
+      style="grid-template-columns: 1fr 50%; grid-column-gap: var(--space2XL); max-width:1000px;">
+      <div class="about-me-content" style="">
+        <div class="about-me-description d-flex flex-column align-items-start mb-4" style="position:relative;">
+          <h1 class="text-white"
+            style="margin-bottom: var(--spaceL); font-size: 2.25rem; letter-spacing: -.02em;font-weight: 500;">Olá, tudo
+            bem?</h1>
+          <p class="text-secondary" style="font-size: 1rem; margin-bottom: var(--spaceXL);">
+            Meu nome é João Pedro Canhete, sou de Foz do Iguaçu - Paraná e estou cursando Análise e Desenvolvimento de
+            Sistemas. Tenho experiência em projetos com Java, tanto em aplicações de interface de usuário com Java Swing
+            quanto em aplicações web com Spring Boot. Além disso, desenvolvo front-ends usando Angular e TypeScript, o
+            que me permite prototipar e validar experiências de forma rápida e eficiente. Se tiver interesse nas
+            ferramentas e nos softwares que uso, dê uma olhada na minha página de projetos!
+          </p>
+          <p class="text-secondary" style="font-size: 1rem; margin-bottom: var(--spaceXL);">
+            Nas horas vagas, gosto de jogar futebol, videogames e assistir a boas séries. Estou sempre aberto para ouvir
+            sobre novas ideias e projetos, então sinta-se à vontade para me mandar uma mensagem!
+          </p>
+        </div>
+        <div>
+          <a href="" class="button">
+            <span class="text-button">
+              Envie-me uma mensagem
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="about-me-image d-flex flex-column align-items-start mb-4">
+        <div class="separator-container" aria-hidden="true" style="margin-top: 65px; margin-bottom: 40px;">
+          <div class="separator">
+            <div class="line"></div>
+            <div class="notch"></div>
+          </div>
+          <span class="section-number" style="color: #8800ff;">Sobre Mim</span>
+        </div>
+        <img src="https://junkielabs.in/assets/img/showcase/products/apps/list/sensify.png" alt="Project Example"
+          class="about-me-img d-grid" style="width: 100%; grid-template-columns: 100%;">
+      </div>
+    </div>
+  </section>
+
+-->

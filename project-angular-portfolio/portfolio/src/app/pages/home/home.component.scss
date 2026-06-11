@@ -1,0 +1,328 @@
+#MyName {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+  }
+  
+  #HeaderTitle {
+    font-weight: 700;
+    font-size: 5.5rem; /* Tamanho inicial para telas grandes */
+    position: relative; /* Para usar position: absolute em ::after */
+  }
+  
+  #LanguagesHeader {
+    font-weight: 500;
+    font-size: medium;
+  }
+  
+  .title-with-line {
+    position: relative;
+    display: inline-block;
+    padding-right: 1rem; /* Espaçamento entre a linha e o texto */
+}
+
+.title-with-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Alinha a linha ao final do texto */
+    transform: translateY(-50%);
+    height: 3px; /* Espessura da linha */
+    background-color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important; /* Cor da linha */
+    width: calc(100vw - 100% - 1rem); /* Calcula a largura restante da tela */
+    max-width: calc(100vw - 100% - 1rem); /* Garante que a linha não ultrapasse a largura da tela */
+}
+
+  .title-with-line-developer {
+    position: relative;
+    display: inline-flex;
+    align-items: center; 
+}
+
+.title-with-line-developer .line {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color:rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+    left: 50;
+    right: 62%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100vw;
+}
+
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 60px; /* Altere este valor para ajustar a distância do final da seção */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    
+}
+
+
+/* Estilo do mouse */
+.mouse {
+    width: 34px;
+    height: 46px;
+    border: 2px solid #6c757d; /* Cor e espessura do contorno do mouse */
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: 0.3s ease;
+}
+
+/* Estilo da "bolinha" de scroll dentro do mouse */
+.mouse .scroll {
+    width: 5px;
+    height: 8px;
+    background-color: #6c757d; /* Cor da bolinha */
+    border-radius: 35%;
+    margin-top: 5px;
+    animation: scrollAnimation 1.5s ease-in-out infinite;
+}
+.scroll-indicator {
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Transição de opacidade suave para entrada e saída */
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+}
+
+/* Animação para a bolinha de scroll */
+@keyframes scrollAnimation {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial e final */
+    }
+    50% {
+        transform: translateY(10px); /* Posição intermediária (para baixo) */
+    }
+}
+
+
+
+  
+  @media (max-width: 1001px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0 !important;
+      width: 100% !important;
+      padding: 0;
+    }
+  
+    #sectionHeader {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+      width: 100% !important;
+      margin: 0;
+      margin-bottom: 30%;
+    }
+
+    .mouse {
+        margin-top: 30px;
+        width: 24px;
+        height: 32px;
+      }
+
+    .button-icon {
+        display: none;
+    }
+
+    .mouse .scroll {
+        width: 3px;
+        height: 5px;
+        margin-top: 3px;
+    }
+  }
+
+  @media (max-width: 845px) {
+    
+    .container {
+        width: 90% !important;
+        top: -50px !important;
+        margin-top: 10%;
+    }
+
+    #HeaderTitle {
+        font-size: 4.7rem;
+    }
+
+    #MyName {
+        font-size: 1.3rem !important;
+    }
+
+    #LanguagesHeader {
+        font-size: 1.2rem !important;
+    }
+    
+  }
+
+  @media screen and (max-width: 780px) {
+    #HeaderTitle {
+      font-size: 4.5rem;
+    }
+
+    .title-with-line-developer .line {
+        right: 65%;
+    }
+    
+  }
+
+    @media screen and (max-width: 720px) {
+    
+        .title-with-line-developer .line {
+            right: 70%;
+        }
+        
+    }
+
+  @media screen and (max-width: 670px) {
+    #HeaderTitle {
+      font-size: 4rem;
+    }
+
+    #MyName {
+        font-size: 1.1rem !important;
+    }
+
+    #LanguagesHeader {
+        font-size: 1rem !important;
+    }
+
+    .title-with-line-developer .line {
+      right: 66%;
+  }
+    
+  }
+
+    @media screen and (max-width: 610px) {
+        .container{
+            top: -40px !important;
+        }
+
+        #HeaderTitle {
+        font-size: 3.5rem;
+        }
+    
+        #MyName {
+            font-size: 1rem !important;
+        }
+    
+        #LanguagesHeader {
+            font-size: 0.9rem !important;
+        }
+        
+        .title-with-line-developer .line {
+            right: 65%;
+        }
+        
+    }
+
+    @media screen and (max-width: 555px) {
+      .title-with-line-developer .line {
+        right: 72%;
+    }
+  }
+
+    @media screen and (max-width: 500px) {
+        .container{
+            top: -40px !important;
+        }
+
+        #HeaderTitle {
+        font-size: 3.2rem;
+        }
+    
+        #MyName {
+            font-size: 0.9rem !important;
+        }
+    
+        #LanguagesHeader {
+            font-size: 0.8rem !important;
+        }
+
+        .title-with-line-developer .line {
+            right: 75%;
+        }
+        
+    }
+
+    @media screen and (max-width: 450px) {
+        .title-with-line-developer .line {
+            right: 80%;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+       .container{
+        width: 96% !important;
+       }
+       
+        #HeaderTitle {
+        font-size: 3.5rem;
+        }
+    
+        #MyName {
+            font-size: 1rem !important;
+        }
+    
+        #LanguagesHeader {
+            font-size: 1rem !important;
+        }
+
+        .title-with-line-developer .line {
+            display: none;
+        }
+        
+    }
+
+    @media screen and (max-width: 399px) {
+ 
+        #HeaderTitle {
+        font-size: 3.2rem;
+        }
+    
+        #MyName {
+            font-size: 0.9rem !important;
+        }
+    
+        #LanguagesHeader {
+            font-size: 0.9rem !important;
+        }
+
+        .title-with-line-developer .line {
+            right: 95%;
+        }
+        
+    }
+
+    @media screen and (max-width: 365px) {
+
+        #HeaderTitle {
+        font-size: 2.8rem;
+        }
+    
+        #MyName {
+            font-size: 0.8rem !important;
+        }
+    
+        #LanguagesHeader {
+            font-size: 0.8rem !important;
+        }
+
+        .title-with-line-developer .line {
+            right: 95%;
+        }
+
+      .title-with-line-developer .line {
+        display: none;
+    }
+  }
+  

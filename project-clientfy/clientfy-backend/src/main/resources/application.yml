@@ -1,0 +1,10 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  profiles:
+    active: @spring.profiles.active@
+
+application:
+  title: ClientFy
+  version: 1.0

@@ -1,0 +1,393 @@
+.sidebar {
+    transition: all 0.3s;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background-color: oklch(17.76% 0 0);
+}
+
+.logoJp a {
+    fill: #fff;
+}
+
+.logoJp a :hover {
+    fill: #8800ff;
+    transition: fill 0.3s;
+    /* Transição suave */
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-links a {
+    margin-top: var(--space-l);
+    text-orientation: mixed;
+    color: #fff;
+    text-decoration: none;
+    padding: var(--space-m);
+    transition: background-color 0.3s;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    writing-mode: vertical-lr;
+}
+
+.vertical-links a {
+    position: relative;
+    display: inline-block;
+    margin-top: 45px;
+    padding: 5px 20px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.vertical-links a::after {
+    content: "";
+    position: absolute;
+    left: 75%;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #8800ff;
+    transform: translateX(-50%) scaleY(-0);
+    transition: transform 0.3s;
+    z-index: 1;
+}
+
+
+
+.vertical-links a:hover::after {
+    transform: translateX(-50%) scaleY(1) scaleX(1);
+}
+
+.vertical-links a:hover {
+    color: #8800ff;
+}
+
+.social-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links a {
+    margin-bottom: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links a {
+    color: #fff;
+    /* Cor padrão do texto e ícones */
+    transition: color 0.3s;
+    /* Transição suave */
+}
+
+
+.social-links a:hover {
+    color: #8800ff;
+    /* Cor ao passar o mouse */
+}
+
+.social-links a svg,
+.nav-social-icons a:hover svg {
+    fill: #6c757d;
+    /* Herda a cor do texto */
+    transition: fill 0.3s;
+    /* Transição suave */
+}
+
+.social-links a:hover svg,
+.nav-social-icons a:hover svg {
+    fill: #8800ff;
+    /* Cor dos SVGs ao passar o mouse */
+}
+
+.navbar {
+    background:color-mix(in lab, var(--background-color) 92%, transparent);
+    box-shadow: 0 14px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-bar-button {
+    padding: var(--space-s);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    position: relative;
+    fill: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-bar-button:hover {
+    background-color: #6c757d58;
+}
+
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    --backdrop: blur(24px) saturate(120%);
+    top: 0;
+    right: 0;
+    height: 80vh;
+    width: 100%;
+    background: color-mix(in lab, var(--background-color) 70%, transparent);
+    backdrop-filter: var(--backdrop);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    border-bottom: 3px solid #6c757d;
+    transform: translateY(-100%);
+    /* Transição suave */
+}
+
+/* Define o estado visível com transição */
+#menubar-active:checked~.menu-container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-social-icons {
+    bottom: 32px;
+    left: 32px;
+    column-gap: var(--space-s);
+    z-index: var(--z-index-2);
+}
+
+#menubar-active {
+    display: none;
+}
+
+.nav-link {
+    width: 100%;
+    font-size: 1.375rem;
+    text-align: center;
+    text-decoration: none;
+    padding: var(--space-l);
+    position: relative;
+    top: calc(var(--space-m)* -1);
+}
+
+.nav-link {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 5px 20px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    /* Centraliza horizontalmente */
+    top: -3px;
+    /* Ajusta para ficar acima do texto */
+    width: 15%;
+    /* Largura da linha */
+    height: 12%;
+    /* Altura da linha */
+    background-color: #8800ff;
+    /* Cor da linha */
+    transform: translateX(-50%) scaleY(0);
+    /* Inicia com a escala Y em 0 */
+    transition: transform 0.3s;
+    /* Transição suave */
+    z-index: 1;
+    /* Para que fique acima de outros elementos */
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleY(1);
+}
+
+.nav-link:hover {
+    color: #8800ff;
+}
+
+
+
+/* Media Query para Responsividade */
+@media (max-width: 768px) {
+    .nav-link {
+        margin-top: 30px;
+        /* Ajusta o espaçamento superior */
+    }
+
+    .nav-link::after {
+        top: 0px;
+        height: 2%;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .logoJp {
+        z-index: 1000;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .navbar {
+        position: fixed;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-m) var(--space-l) var(--space-m) var(--space-m);
+        z-index: var(--z-index-4);
+        isolation: isolate;
+    }
+
+
+    .theme-toggle-button {
+        display: none !important;
+    }
+
+    .nav-bar-button,
+    .close-nav-button {
+        display: block;
+    }
+
+    #menubar-active:checked~.menu-container {
+        display: flex !important;
+        
+    }
+
+    .close-nav-button {
+        --offset: var(--space-xs);
+        --inset: calc(var(--space-l) - var(--offset));
+        position: fixed;
+        top: var(--inset);
+        right: var(--inset);
+        z-index: var(--z-index-4);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: flex;
+        position: fixed;
+        fill: #fff;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-nav-button:hover {
+        background-color: #6c757d58;
+    }
+
+    .close-nav-button svg {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 696px) {
+    .navbar {
+        padding: var(--space-m) var(--space-ss) var(--space-m) var(--space-m);
+    }
+
+    .nav-bar-button svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .close-nav-button svg {
+        width: 36px;
+        height: 36 px;
+    }
+
+    .nav-link {
+        font-size: 1.125rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .nav-social-icons {
+        bottom: 16px;
+        left: 16px;
+    }
+
+    .nav-social-icons svg {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+/* Estilo do botão */
+.theme-toggle-button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    background-color: #33333300;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle-button:hover {
+    background-color: #6c757d58;
+
+}
+
+/* Ícones de Sol e Lua */
+.button-icon svg {
+    width: 38px;
+    fill: #ffffff;
+}
+
+/* Esconder o ícone de lua quando no tema claro */
+.sun-icon {
+    display: inline-block;
+    display: none;
+}
+
+.moon-icon {
+    display: inline-block;
+}
